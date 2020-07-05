@@ -1,7 +1,7 @@
 Monkey CSI
 ---
 
-A C\# port of the Monkey tree-walking interpreter from Thorsten Ball’s "*[Writing An Interpreter In Go](https://interpreterbook.com/)*".
+A C\# port of the [Monkey](https://monkeylang.org/) tree-walking interpreter from Thorsten Ball’s "*[Writing An Interpreter In Go](https://interpreterbook.com/)*".
 
 Since Go and C\# have many differences, this port takes liberties on re-implementing some of the original Go code. Nonetheless, functions and variables remain where they are relative to each other, such that the Go and C\# code can still be compared side by side. Examples of changes include the following:
 
