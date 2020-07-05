@@ -11,9 +11,9 @@ Since Go and C\# have many differences, this port takes liberties on re-implemen
 
 -   Casting is used to access struct fields, whereas Go would just use them directly.
 
--   In Go functions that return tuples and have the second Boolean result as an  error indicator, null checking of the first result is used for error detection.
+-   For Go functions that return tuples and have the second Boolean result as an  error indicator, null checking in C\# of the single result is used for error detection.
 
--   Tho make prefixing in the C\# code more consistent with the original Go implementation, some Go "import" statements do not have their corresponding C\# "using" statements. Since it was decided to use similarly named classes or structs in C\#, "using" statements can cause ambiguouties with the namespace.
+-   To make prefixing in the C\# code more consistent with the original Go implementation, some Go "import" statements do not have their corresponding C\# "using" statements. Since it was decided to use similarly named classes or structs in C\#, "using" statements can cause ambiguouties with the namespace.
 
 -   In place of what looks like function pointers in Go, C\# delegates were used for the Pratt parser. It turns out that instances of the assigned delegate lose scope of the fields in the class they belong to, if the fields are not static. Hence, fields and functions in the parser class are made static. This solved a bug wherein the tokens appear to be null within the parsing functions.
 
